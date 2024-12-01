@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var i = 0;
+      function changeImageNext() {
+        if (i < 3) {
+          i++;
+        }
+        var images = ["user.jpeg", "reg.jpg", "login.png", "linkedin.svg"];
+        console.log("Next " + i);
+        var curImage = images[i];
+        usrImage.src = "images/" + curImage;
+      }
+
+      function changeImagePrev() {
+        if (i > 0) {
+          i--;
+        }
+        console.log("Prev " + i);
+        var images = ["user.jpeg", "reg.jpg", "login.png", "linkedin.svg"];
+        var curImage = images[i];
+        usrImage.src = "images/" + curImage;
+      }
+    </script>
+  </head>
+  <body>
+    <img
+      src="images/user.jpeg"
+      alt=""
+      id="usrImage"
+      style="width: 100px; height: 100px"
+    />
+    <button onclick="changeImagePrev();">Prev</button>
+    <button onclick="changeImageNext();">Next</button>
+  </body>
+</html>

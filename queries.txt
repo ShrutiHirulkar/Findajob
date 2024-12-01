@@ -1,0 +1,38 @@
+Index:
+1.Get all categories
+ SELECT * FROM `categories`
+
+2.Get all companies
+ SELECT * FROM `companies`
+
+3.Gel all companies based on categories
+SELECT * FROM `companies` WHERE category=1;
+
+
+Description:
+1.Get Jobs based on Categories
+SELECT jobs.id,jobs.title, jobs.exp,jobs.package,jobs.location,jobs.info, jobs.skills, companies.image, companies.rating, companies.reviews FROM `jobs` INNER JOIN companies ON jobs.company=companies.id INNER JOIN categories ON companies.category=categories.id WHERE categories.id=1;
+
+2. Filter Jobs
+SELECT jobs.id,jobs.title, jobs.exp,jobs.package,jobs.location,jobs.info, jobs.skills, companies.image, companies.rating, companies.reviews FROM `jobs` INNER JOIN companies ON jobs.company=companies.id INNER JOIN categories ON companies.category=categories.id WHERE jobs.location="Amravati" AND categories.category="Remote" AND companies.name="TCS" AND (jobs.minexp BETWEEN 5 AND 10) AND (jobs.maxsal BETWEEN 0 AND 5);
+
+Info:
+1. Get Job based on id
+SELECT * FROM `jobs` INNER JOIN companies ON jobs.company=companies.id INNER JOIN categories ON jobs.category=categories.id WHERE jobs.id=1;
+
+2. Get benifits based on jobid
+SELECT * FROM `benifits` WHERE jobid=1;
+
+3.Get job desc based on jobid
+SELECT * FROM `jobdesc` INNER JOIN jobtitles ON jobdesc.title=jobtitles.id WHERE jobdesc.jobid=1;
+
+Saved Jobs:
+1. Get saved jobs based on user id
+SELECT * FROM `savedjobs` INNER JOIN jobs ON savedjobs.job=jobs.id INNER JOIN companies ON jobs.company=companies.id INNER JOIN categories ON jobs.category=categories.id WHERE savedjobs.user=1;
+
+2. Get user based on id
+SELECT * FROM `users` WHERE id=1;
+
+Search:
+1.Get jobs based on search query
+SELECT * FROM `jobs` INNER JOIN companies ON jobs.company=companies.id INNER JOIN categories ON jobs.category=categories.id WHERE jobs.minexp<6 AND jobs.location='amravati' AND jobs.tags LIKE "%js%";

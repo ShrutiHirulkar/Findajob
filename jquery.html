@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="mybody">
+    <img
+      src="images/bike.jpeg"
+      alt=""
+      id="img1"
+      style="width: 150px; height: 150px"
+    />
+    <img
+      src="images/car.jpeg"
+      alt=""
+      id="img2"
+      style="width: 150px; height: 150px"
+    />
+    <img
+      src="images/flower.jpeg"
+      alt=""
+      id="img3"
+      style="width: 150px; height: 150px"
+    />
+
+    <img src="" alt="" id="mainImg" style="width: 300px; height: 300px" />
+  </body>
+  <script>
+    $("#img1").mouseenter(function () {
+      // mainImg.src = "images/bike.jpeg";
+      $("#mainImg").attr("src", "images/bike.jpeg");
+    },);
+
+    $("#img1").mouseleave(function () {
+      mainImg.src = "images/user.jpeg";
+    });
+
+    $("#img2").mouseenter(function () {
+      mainImg.src = "images/car.jpeg";
+    });
+
+    $("#img2").mouseleave(function () {
+      mainImg.src = "images/user.jpeg";
+    });
+
+    $("#img3").mouseenter(function () {
+      mainImg.src = "images/flower.jpeg";
+    });
+
+    $("#img3").mouseleave(function () {
+      mainImg.src = "images/user.jpeg";
+    });
+  </script>
+</html>

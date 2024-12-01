@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function validate() {
+        passlength = pass.value.length;
+        var firstChar = pass.value.charAt(0);
+        if(firstChar===firstChar.toUpperCase() && passlength==8  ){
+          alert("Valid Password");
+        }else{
+          alert("Invalid Password");
+        }
+
+  
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="pass" />
+    <button onclick="validate();">Validate</button>
+  </body>
+</html>

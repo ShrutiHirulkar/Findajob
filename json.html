@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var companyInfo = `{ 
+  "companies":[{
+  "name":"Genpact",
+  "image":"gps.gif",
+  "rating":4.2,
+  "review":"27.5K",
+  "id":1
+},  {
+  "name":"HP",
+  "image":"hp.png",
+  "rating":5.0,
+  "review":"2.5K",
+  "id":2
+}, {
+  "name":"LG",
+  "image":"lg.png",
+  "rating":3.8,
+  "review":"27.5K",
+  "id":3
+},{
+  "name":"Wipro",
+  "image":"wipro.png",
+  "rating":4.8,
+  "review":"3.5K",
+  "id":4
+}]
+}`;
+      var jobj = JSON.parse(companyInfo);
+      for(var i=0; i<jobj.companies.length;i++){
+        console.log(jobj.companies[i].name);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

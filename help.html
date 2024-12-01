@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      .box {
+        border: 1px solid black;
+        padding: 4px;
+        margin: 15px;
+        border-radius: 25px;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+      img {
+        border-radius: 90px;
+        width: 200px;
+        height: 200px;
+      }
+      h1,
+      h2 {
+        margin: 5px;
+        font-size: 1.2em;
+      }
+      .profile-container {
+        width: 75%;
+
+        margin: auto;
+      }
+      .profile-info h1 {
+        font-size: 1.5em;
+      }
+      span {
+        margin: 15px;
+      }
+      .form-container {
+        border: 1px solid black;
+        padding: 2%;
+        margin: 2%;
+        border-radius: 15px;
+      }
+      .form-container input,
+      .form-container select,
+      .form-container textarea {
+        width: 100%;
+        margin: 11px 0;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      .form-container button {
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        border-radius: 5px;
+      }
+      .custom-button {
+        background-color: #4285f4; /* Match the blue color */
+        color: white; /* White text color */
+        border: none; /* Remove default border */
+        padding: 10px 20px; /* Add some padding */
+        text-align: left; /* Left align the text */
+        text-decoration: none; /* Remove underline */
+        display: inline-block; /* Align the button inline */
+        font-size: 16px; /* Font size */
+        margin: 4px 2px; /* Margin */
+        cursor: pointer; /* Pointer cursor on hover */
+        border-radius: 25px; /* Rounded corners */
+      }
+
+      p {
+        margin: 15px;
+      }
+      button {
+        margin: 10px;
+      }
+      .containerClass {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex">
+      <div style="width: 30%">
+        <div
+          style="
+            border: 1px solid black;
+            text-align: center;
+            border-radius: 25px;
+            margin: 15px;
+            padding: 15px;
+          "
+        >
+          <img
+            src="images/user.jpeg"
+            alt=""
+            style="width: 150px; height: 150px; border-radius: 50%"
+          />
+          <p id="username">User Name</p>
+          <p id="phone">Phone</p>
+        </div>
+
+        <button
+          class="btn btn-outline-danger"
+          style="width: 80%; border-radius: 25px; margin-left: 10%"
+        >
+          Profile
+        </button>
+
+        <button
+          class="btn btn-outline-danger"
+          style="width: 80%; border-radius: 25px; margin-left: 10%"
+        >
+          Saved Jobs
+        </button>
+
+        <button
+          class="btn btn-outline-danger"
+          style="width: 80%; border-radius: 25px; margin-left: 10%"
+        >
+          Help
+        </button>
+
+        <button
+          class="btn btn-outline-danger"
+          style="width: 80%; border-radius: 25px; margin-left: 10%"
+        >
+          Logout
+        </button>
+      </div>
+      <div style="width: 70%">
+        
+          <div
+            style="
+              border: 1px solid black;
+              padding: 2%;
+              margin: 2%;
+              border-radius: 15px;
+            "
+          >
+            <div style="display: flex">
+              <h1 style="font-size: 25px">
+                <b
+                  ><i
+                    ><span style="font-size: 30px"
+                      ><i class="fa-regular fa-envelope"></i></span
+                    ><span>Jobsafer FastForward Services</span></i
+                  ></b
+                >
+              </h1>
+            </div>
+            <br />
+            <h2><b>Toll Free Number:</b> 1800-102-5557, 1800-572-5557</h2>
+            <h2><b>Work Timings:</b> 9.30 AM to 6.30 PM</h2>
+            <h2><b>Working Days:</b> (Monday to Saturday)</h2>
+            <br />
+
+            <h2><b>Email Id:</b> service@jobsafer.com</h2>
+            <br />
+            <h2>
+              <b>International Clients:</b> +91 120 4021100 (9.30 AM to 6.00 PM
+              IST)
+            </h2>
+            <br /><br /><br />
+          </div>
+
+          <div
+            style="
+              border: 1px solid black;
+              padding: 2%;
+              margin: 2%;
+              border-radius: 15px;
+            "
+          >
+            <div style="display: flex">
+              <div class="form-container">
+                <h1 style="font-size: 30px">
+                  <b>Report a Problem/Need Assistance</b>
+                </h1>
+                <form action="/submit_feedback" method="post">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter Your Name"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Your Jobsafer Registered Email ID"
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="contact"
+                    placeholder="Enter Your Contact Number"
+                    pattern="^[789]\d{9}$"
+                    required
+                  />
+                  <select name="area_of_concern" required>
+                    <option value="" disabled selected>
+                      Select Area of Concern
+                    </option>
+                    <option value="login_issue">Login Issue</option>
+                    <option value="create_naukri_profile">
+                      Create JobSafer Profile
+                    </option>
+                    <option value="search">Search</option>
+                    <option value="apply">Apply</option>
+                    <option value="getting_around_naukri">
+                      Getting around Jobsafer
+                    </option>
+                    <option value="settings">Settings</option>
+                    <option value="security_advice">Security Advice</option>
+                    <option value="others">Others</option>
+                  </select>
+                  <textarea
+                    name="feedback"
+                    rows="4"
+                    placeholder="Enter Your Feedback"
+                    required
+                  ></textarea>
+                  <button class="custom-button">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var pinfo=`{"username":"ravi","phone":"9595210063"}`;
+    var jobj=JSON.parse(pinfo);
+    username.innerHTML=jobj.username;
+    phone.innerHTML=jobj.phone;
+  </script>
+</html>
